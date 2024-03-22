@@ -1,0 +1,38 @@
+<!DOCTYPE html5>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/styles/index.css">
+  <title>Inventario de Equipos de Cómputo</title>
+</head>
+<body>
+  </div>
+  <div class="container">
+    <h1>Inventario de Equipos de Cómputo</h1>
+    <form id="inventoryForm">
+      <label for="itemName">Nombre del Equipo</label>
+      <input type="text" id="itemName" name="itemName" required>
+
+      <label for="itemType">Tipo de Equipo:</label>
+      <select id="itemType" name="itemType" required> 
+        <option value="laptop">Laptop </option>
+        <option value="desktop">Desktop</option>
+        <option value="tablet">Tablet</option>
+      </select>
+
+      <label for="itemQuantity">Cantidad:</label>
+      <input type="number" id="itemQuantity" name="itemQuantity" min="1" required>
+
+      <button type="button" onclick="addItem()">Agregar Equipo</button>
+    </form>
+
+    <div id="inventoryList">
+      <!-- Lista de equipos agregados-->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
