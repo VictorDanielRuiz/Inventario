@@ -6,13 +6,15 @@ const EditTodo = ({ todo }) => {
 
   //edit description function
 
-  const updateDescription = async (e) => {
+  const updateDescription = async e => {
     e.preventDefault();
     try {
       const body = { description };
-      const response = await fetch(`http//localhost:5000/todos/${todo.todo_id}` {
+      const response = await fetch(
+        `http//localhost:5000/todos/${todo.todo_id}` 
+        {
         method: "PUT",
-        headers: {"Content-Type": "application-json"},
+        headers: { "Content-Type": "application-json" },
         body: JSON.stringify(body)
       });
 
@@ -83,7 +85,6 @@ const EditTodo = ({ todo }) => {
                 Close
               </button>
             </div>
-      
           </div>
         </div>
       </div>
