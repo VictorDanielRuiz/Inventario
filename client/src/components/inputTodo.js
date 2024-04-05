@@ -6,15 +6,16 @@ const InputTodo = () => {
 
   const onSubmitForm = async (e) => {
     e.preventDefault();
+    console.log(description);
     try {
       const body = { description }
+      console.log(body);
       const response = await fetch("http://localhost:5000/todos", {
         method: "POST",
         headers: { "Content-Type": "aplication/json" },
-        body: JSON.stringify(body)
+        body: JSON.stringify({ description: "puto" })
       });
 
-      console.log(response);
     } catch (err) {
       console.error(err.message)
     }

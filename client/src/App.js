@@ -10,7 +10,7 @@ function App() {
   return (
     <Fragment>
       <div className="container">
-        <inputTodo />
+        <InputTodo />
         <ListTodos />
       </div>
     </Fragment>

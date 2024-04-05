@@ -36,7 +36,6 @@ const ListTodos = () => {
     getTodos();
   }, []);
 
-  console(todos)
 
   console.log(todos);
   return (
@@ -68,7 +67,7 @@ const ListTodos = () => {
               </button>
             </td>
           </tr>
-        ))};
+        ))}
       </tbody>
     </table>
   </Fragment>

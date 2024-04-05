@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 
 const EditTodo = ({ todo }) => {
-  const = [description , setDescription] = useState(todo.description);
+  const [description , setDescription] = useState(todo.description);
 
 
   //edit description function
@@ -11,7 +11,7 @@ const EditTodo = ({ todo }) => {
     try {
       const body = { description };
       const response = await fetch(
-        `http//localhost:5000/todos/${todo.todo_id}` 
+        `http//localhost:5000/todos/${todo.todo_id}`, 
         {
         method: "PUT",
         headers: { "Content-Type": "application-json" },
