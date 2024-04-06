@@ -22,7 +22,7 @@ const ListTodos = () => {
 
   const getTodos = async() => {
     try {
-      const response = await fetch("api/todos");
+      const response = await fetch("https://inventario-nine-tan.vercel.app/todos");
       const jsonData = await response.json();
 
       setTodos(jsonData);
