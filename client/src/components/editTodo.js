@@ -11,7 +11,7 @@ const EditTodo = ({ todo }) => {
     try {
       const body = { description };
       const response = await fetch(
-        `api/todos/${todo.todo_id}`,
+        `https://inventario-nine-tan.vercel.app/todos/${todo.todo_id}`,
         {  
         method: "PUT",
         headers: { "content-type": "application/json" },

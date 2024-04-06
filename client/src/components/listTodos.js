@@ -10,7 +10,7 @@ const ListTodos = () => {
 
   const deleteTodo = async (id) => {
     try {
-      const deleteTodo = await fetch(`api/todos/${id}`, {
+      const deleteTodo = await fetch(`https://inventario-nine-tan.vercel.app/todos/${id}`, {
         method: "DELETE"
       });
 
