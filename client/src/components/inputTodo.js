@@ -9,7 +9,7 @@ const InputTodo = () => {
     try {
       const body = { description };
       console.log(body);
-      const response = await fetch("http://localhost:5000/todos", {
+      const response = await fetch("api/todos", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(body)
