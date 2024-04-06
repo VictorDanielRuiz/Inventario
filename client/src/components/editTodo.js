@@ -14,7 +14,7 @@ const EditTodo = ({ todo }) => {
         `http://localhost:5000/todos/${todo.todo_id}`,
         {  
         method: "PUT",
-        headers: { "Content-Type": "application-json" },
+        headers: { "content-type": "application/json" },
         body: JSON.stringify(body)
       });
 
