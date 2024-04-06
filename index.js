@@ -14,8 +14,8 @@ app.use(express.json()); //req.body
 app.post("/todos", async (req, res) => {
     try {
         const { description } = req.body;
-        console.log("Aqui debe esta la descripcion", req.body);
-        const newTodo = await pool.query("INSERT INTO todo (description) VALUES($1) RETURNING *",
+        const newTodo = await pool.query(
+            "INSERT INTO todo (description) VALUES($1) RETURNING *",
             [description]
         );
 
@@ -76,12 +76,11 @@ app.delete("/todos/:id", async (req, res) => {
     const deleteTodo = await pool.query("DELETE FROM todo WHERE todo_id = $1", [
       id
     ]);
-
     res.json("Todo was deleted!");
   } catch (err) {
-    console.log(err.message)
+    console.log(err.message);
   }
-})
+});
 
 app.listen(5000, () => {
     console.log("El server ha iniciado en el puerto 5000");

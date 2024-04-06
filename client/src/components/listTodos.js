@@ -10,7 +10,7 @@ const ListTodos = () => {
 
   const deleteTodo = async (id) => {
     try {
-      const deleteTodo = await fetch(`http//localhost:5000/todos/${id}`, {
+      const deleteTodo = await fetch(`http://localhost:5000/todos/${id}`, {
         method: "DELETE"
       });
 
@@ -18,11 +18,10 @@ const ListTodos = () => {
     } catch (err) {
       console.error(err.message);
     }
-  }
+  };
 
   const getTodos = async() => {
     try {
-
       const response = await fetch("http://localhost:5000/todos");
       const jsonData = await response.json();
 
@@ -36,16 +35,16 @@ const ListTodos = () => {
     getTodos();
   }, []);
 
-
   console.log(todos);
   return (
   <Fragment>
+    {" "}
     <table class="table mt-5 text-center">
       <thead>
         <tr>
-          <th>Description</th>
-          <th>Edit</th>
-          <th>Delete</th>
+          <th>Descripción</th>
+          <th>Editar</th>
+          <th>Eliminar</th>
         </tr>
       </thead>
       <tbody>
@@ -63,7 +62,7 @@ const ListTodos = () => {
             <td>
               <button 
               className="btn btn-danger" 
-              onClick={() => deleteTodo(todo.todo_id)}>Delete
+              onClick={() => deleteTodo(todo.todo_id)}>Eliminar
               </button>
             </td>
           </tr>

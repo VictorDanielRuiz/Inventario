@@ -11,8 +11,8 @@ const EditTodo = ({ todo }) => {
     try {
       const body = { description };
       const response = await fetch(
-        `http//localhost:5000/todos/${todo.todo_id}`, 
-        {
+        `http://localhost:5000/todos/${todo.todo_id}`,
+        {  
         method: "PUT",
         headers: { "Content-Type": "application-json" },
         body: JSON.stringify(body)
@@ -30,9 +30,9 @@ const EditTodo = ({ todo }) => {
         type="button" 
         class="btn btn-warning" 
         data-toggle="modal" 
-        data-target={`#id${todo.todo_id}`}>
-
-      Edit 
+        data-target={`#id${todo.todo_id}`}
+      >
+      Editar 
       </button>
       
       {/*
@@ -46,7 +46,7 @@ const EditTodo = ({ todo }) => {
         <div class="modal-dialog">
           <div class="modal-content">   
             <div class="modal-header">
-              <h4 class="modal-title">Edit Todo</h4>
+              <h4 class="modal-title">Editar información</h4>
               <button 
                 type="button" 
                 class="close" 
@@ -71,9 +71,9 @@ const EditTodo = ({ todo }) => {
                 type="button" 
                 class="btn btn-warning" 
                 data-dismiss="modal"
-                onClick ={e => updateDescription(e)}
+                onClick={e => updateDescription(e)}
               >
-                  Edit
+                Aceptar
               </button>
               <button 
                 type="button" 
@@ -82,7 +82,7 @@ const EditTodo = ({ todo }) => {
                 onClick={() => setDescription(todo.description)}
               >
                 
-                Close
+                Cerrar
               </button>
             </div>
           </div>
