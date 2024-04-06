@@ -3,8 +3,8 @@ import "./App.css";
 
 //components
 
-import InputTodo from "./components/InputTodo";
-import ListTodos from "./components/ListTodos";
+import InputTodo from "./components/inputTodo";
+import ListTodos from "./components/listTodos";
 
 function App() {
   return (
