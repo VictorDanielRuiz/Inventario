@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'https://inventario-nine-tan.vercel.app',
+      target: 'https://inventario-nine-tan.vercel.app/',
       changeOrigin: true,
     })
   );
